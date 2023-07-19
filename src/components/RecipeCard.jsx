@@ -6,8 +6,10 @@ const RecipeCard = ({ recipe }) => {
 
     const id = uri?.split("#")[1]
 
+    
+
     return (
-        <Link to={`/recipes/${id}`} className='w-full md:w-[220px]'>
+        <Link to={`/recipes/${id}`} className='w-full md:w-[220px]' onClick={() => window.scrollTo({top: 0, left: 0, behavior: 'smooth'})}>
             <div className='bg-_gradient shadow w-full rounded-lg'>
                 <img src={image} alt={label} className='rounded-lg h-[200px] md:h-[150px] w-full' />
 
@@ -24,6 +26,7 @@ const RecipeCard = ({ recipe }) => {
                     </div>
                 </div>
             </div>
+        
         </Link>
     )
 }
